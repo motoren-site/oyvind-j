@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: oyvind-j-deployment
+  name: oyvind-jo-deployment
   namespace: apps
   labels:
     app: hello
@@ -16,7 +16,7 @@ spec:
         app: hello
     spec:
       containers:
-        - name: registry.digitalocean.com/olsen/oyvind-j
-          image: registry.digitalocean.com/olsen/oyvind-j
+        - name: registry.digitalocean.com/olsen/oyvind-jo
+          image: registry.digitalocean.com/olsen/oyvind-jo
           ports:
             - containerPort: 80
