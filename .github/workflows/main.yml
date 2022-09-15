@@ -20,6 +20,9 @@ jobs:
       - name: Build latest
         run: docker build -t registry.digitalocean.com/olsen/oyjoh .
 
+      - name: push
+        run: docker push registry.digitalocean.com/olsen/oyjoh
+
       # DO
       - name: Set up kubectl
         uses: matootie/dokube@v1.3.4
