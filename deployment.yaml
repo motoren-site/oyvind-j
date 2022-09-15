@@ -3,20 +3,19 @@ kind: Deployment
 metadata:
   name: oyjoh
   namespace: apps
-  labels:
-    app: hello
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello
+      app: oyjoh
   template:
     metadata:
       labels:
-        app: hello
+        app: oyjoh
     spec:
       containers:
-        - name: registry.digitalocean.com/olsen/oyjoh
+        - name: application
           image: registry.digitalocean.com/olsen/oyjoh
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
