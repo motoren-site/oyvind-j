@@ -21,14 +21,15 @@ jobs:
         run: docker build -t registry.digitalocean.com/olsen/oyjoh .
 
       - name: push
-        run: docker push registry.digitalocean.com/olsen/oyjoh
+        run: docker push registry.digitalocean.com/olsen/oyjoh:latest
 
       # DO
       - name: Set up kubectl
-        uses: matootie/dokube@v1.3.4
+        uses: matootie/dokube@v1.4.0
         with:
           personalAccessToken: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
           clusterName: k8s-miles
+          namespace: apps
 
       - name: Setup
         run: kubectl apply -f ${GITHUB_WORKSPACE}/deployment.yaml
