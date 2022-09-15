@@ -7,7 +7,7 @@ def index():
     return 'Hello world!'
 
 @app.route('/')
-def index():
+def home():
     return 'Hello world!'
 
 app.run(app.run(host='0.0.0.0', port=5000))
