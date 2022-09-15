@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: oyvind-deployment
+  name: oyjoh-deployment
   namespace: apps
   labels:
     app: hello
