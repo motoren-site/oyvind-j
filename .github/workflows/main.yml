@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
 
       - name: Build latest
-        run: docker build -t registry.digitalocean.com/olsen/oyvind-j
+        run: docker build -t registry.digitalocean.com/olsen/hello
 
       # DO
       - name: Set up kubectl
