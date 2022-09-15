@@ -16,7 +16,7 @@ spec:
         app: hello
     spec:
       containers:
-        - name: registry.digitalocean.com/olsen/oyvind-j
-          image: registry.digitalocean.com/olsen/oyvind-j
+        - name: registry.digitalocean.com/olsen/oyjoh
+          image: registry.digitalocean.com/olsen/oyjoh
           ports:
             - containerPort: 80
