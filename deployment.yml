@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: hello
-          image: hello
+          image: latest
           ports:
             - containerPort: 5000
