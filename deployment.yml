@@ -19,4 +19,4 @@ spec:
         - name: registry.digitalocean.com/olsen/oyjoh
           image: registry.digitalocean.com/olsen/oyjoh
           ports:
-            - containerPort: 80
+            - containerPort: 8080
