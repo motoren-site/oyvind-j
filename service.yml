@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: oyjoh
+  namespace: apps
+  labels:
+    k8s-app: oyjoh
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    k8s-app: oyjoh
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack

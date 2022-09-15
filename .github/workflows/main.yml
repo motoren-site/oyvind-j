@@ -33,3 +33,18 @@ jobs:
 
       - name: Setup
         run: kubectl apply -f ${GITHUB_WORKSPACE}/deployment.yaml
+
+      - name: Deploy Service
+        run: kubectl apply -f config/service.yml
+
+      - name: Deploy Ingress
+        run: kubectl apply -f config/ingress.yml
+
+      - name: Check status
+        run: kubectl rollout status deployment/motoren-frontpage -n apps
+
+      - name: Remove old containers
+        uses: ripplr-io/docr-image-remove@v1
+        with:
+          image_repository: registry.digitalocean.com/olsen
+          buffer_size: 2
