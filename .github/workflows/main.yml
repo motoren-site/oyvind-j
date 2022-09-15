@@ -26,5 +26,3 @@ jobs:
         with:
           personalAccessToken: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
           clusterName: k8s-miles
-#                                                            ^^FIX^^^
-    ##Add step for pusing to registry.digitalocean.com/olsen
