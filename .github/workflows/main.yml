@@ -28,4 +28,4 @@ jobs:
           clusterName: k8s-miles
 
       - name: Setup
-        run: kubectl apply -f /deployment.yaml${GITHUB_WORKSPACE}
+        run: kubectl apply -f ${GITHUB_WORKSPACE}/deployment.yaml
