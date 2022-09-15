@@ -26,3 +26,6 @@ jobs:
         with:
           personalAccessToken: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
           clusterName: k8s-miles
+
+      - name: Setup
+        run: kubectl apply -f /deployment.yaml${GITHUB_WORKSPACE}
